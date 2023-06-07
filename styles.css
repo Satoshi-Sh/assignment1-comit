@@ -67,3 +67,16 @@ th,
 td {
   border: 2px solid black;
 }
+
+.opinion-div {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 100px;
+}
+
+button {
+  width: 90px;
+}
