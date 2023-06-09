@@ -68,15 +68,39 @@ td {
   border: 2px solid black;
 }
 
-.opinion-div {
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+fieldset {
+  padding: 20px;
   margin: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  height: 200px;
+  gap: 10px;
+}
+input[type="text"] {
+  width: 150px;
 }
 
 button {
   width: 90px;
+}
+
+legend {
+  font-size: 20px;
+}
+
+.radio-div {
+  display: flex;
+  align-items: center;
+}
+
+.radio-div label {
+  width: 50px;
+  height: 10px;
 }

@@ -27,14 +27,29 @@
         Your browser does not support the audio element.
       </audio>
 
-      <div class="opinion-div">
-        <label for="opinion">Let me know your opininon about the music</label>
-        <div class="input-div">
-          <textarea id="opinion" rows="8" cols="40"></textarea>
-        </div>
-
+      <form>
+        <fieldset>
+          <legend>Questionaire</legend>
+          <label for="name"> Name </label>
+          <input type="text" placeholder="your name..." />
+          <label for="musician">Are you a musician?</label>
+          <div class="radio-div">
+            <label
+              >Yes
+              <input type="radio" name="musician" />
+            </label>
+            <label
+              >No
+              <input type="radio" name="musician" />
+            </label>
+          </div>
+          <label for="opinion">Let me know your opininon about the music</label>
+          <div class="input-div">
+            <textarea id="opinion" rows="8" cols="40"></textarea>
+          </div>
+        </fieldset>
         <button>Submit</button>
-      </div>
+      </form>
     </main>
 
     <footer>Created by Satoshi S.</footer>
