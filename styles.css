@@ -1,15 +1,16 @@
 body {
   margin: 0px;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: ghostwhite;
+  overflow-x: hidden;
 }
 
 header {
-  position: sticky;
+  position: fixed;
   font-size: 20px;
   height: 30px;
-  max-width: 100vw;
+  width: 100vw;
   background-color: gainsboro;
   display: flex;
   align-items: center;
@@ -41,11 +42,11 @@ code {
 }
 
 main {
-  padding: 20px;
+  padding: 40px;
+  min-height: 87vh;
 }
 
 footer {
-  position: absolute;
   bottom: 0;
   height: 30px;
   background-color: gainsboro;
@@ -155,4 +156,19 @@ legend {
 
 .dog-img.animate {
   animation-play-state: running;
+}
+
+#eva {
+  height: 50vh;
+  width: auto;
+}
+
+.center-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#with-image {
+  background-image: url("asset/vagabond.jpg");
+  background-size: cover;
 }

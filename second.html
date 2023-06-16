@@ -40,34 +40,34 @@
           </tr>
         </tfoot>
       </table>
-    </main>
-    <form action="https://www.google.com" method="get">
-      <label for="q">Keyword</label>
-      <input name="q" />
-      <input type="submit" />
-    </form>
-    <div class="show-div">
-      <button onclick="openPopup()">Click Here</button>
-    </div>
-    <div id="popupContainer" class="popup-container">
-      <!-- Content of the popup window goes here -->
-      <div class="popup-content">
-        <h2>Popup Window</h2>
-        <p>This is a popup window.</p>
-        <div id="my-element" class="image-div">
-          <img
-            src="/asset/fixed.png"
-            id="dog-img"
-            class="dog-img"
-            alt="dog scratching the back"
-          />
-        </div>
-        <button onclick="toggleAnimation()">Toggle Animation</button>
-        <button onclick="closePopup()">Close</button>
+      <form action="https://www.google.com" method="get">
+        <label for="q">Keyword</label>
+        <input name="q" />
+        <input type="submit" />
+      </form>
+      <div class="show-div">
+        <button onclick="openPopup()">Click Here</button>
       </div>
-    </div>
-
+      <div id="popupContainer" class="popup-container">
+        <!-- Content of the popup window goes here -->
+        <div class="popup-content">
+          <h2>Popup Window</h2>
+          <p>This is a popup window.</p>
+          <div id="my-element" class="image-div">
+            <img
+              src="/asset/fixed.png"
+              id="dog-img"
+              class="dog-img"
+              alt="dog scratching the back"
+            />
+          </div>
+          <button onclick="toggleAnimation()">Toggle Animation</button>
+          <button onclick="closePopup()">Close</button>
+        </div>
+      </div>
+    </main>
     <footer>Created by Satoshi S.</footer>
+
     <script>
       function openPopup() {
         const popupContainer = document.getElementById("popupContainer");
