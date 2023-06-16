@@ -46,7 +46,69 @@
       <input name="q" />
       <input type="submit" />
     </form>
+    <div class="show-div">
+      <button onclick="openPopup()">Click Here</button>
+    </div>
+    <div id="popupContainer" class="popup-container">
+      <!-- Content of the popup window goes here -->
+      <div class="popup-content">
+        <h2>Popup Window</h2>
+        <p>This is a popup window.</p>
+        <div id="my-element" class="image-div">
+          <img
+            src="/asset/fixed.png"
+            id="dog-img"
+            class="dog-img"
+            alt="dog scratching the back"
+          />
+        </div>
+        <button onclick="toggleAnimation()">Toggle Animation</button>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
 
     <footer>Created by Satoshi S.</footer>
+    <script>
+      function openPopup() {
+        const popupContainer = document.getElementById("popupContainer");
+        popupContainer.style.display = "block";
+      }
+
+      function closePopup() {
+        const popupContainer = document.getElementById("popupContainer");
+        popupContainer.style.display = "none";
+      }
+      let intervalId;
+      function toggleAnimation(e) {
+        event.stopPropagation();
+        console.log("clicked");
+        const image = document.getElementById("dog-img");
+
+        if (image.classList.contains("animate")) {
+          image.classList.remove("animate");
+          clearInterval(intervalId);
+        } else {
+          image.classList.add("animate");
+          // change background color to party
+          intervalId = setInterval(changeBackgroundColor, 1000);
+        }
+      }
+
+      const element = document.getElementById("my-element");
+
+      function changeBackgroundColor() {
+        const randomColor = getRandomColor();
+        element.style.backgroundColor = randomColor;
+      }
+
+      function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
   </body>
 </html>
