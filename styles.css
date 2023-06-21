@@ -8,6 +8,7 @@ body {
 
 header {
   position: fixed;
+  z-index: 200;
   font-size: 20px;
   height: 30px;
   width: 100vw;
@@ -171,4 +172,67 @@ legend {
 #with-image {
   background-image: url("asset/vagabond.jpg");
   background-size: cover;
+}
+
+.box-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  background-color: aquamarine;
+  border: 4px red;
+  border-style: dotted;
+  font-size: 10rem;
+  text-align: center;
+}
+
+.box:first-child,
+.box:nth-child(5) {
+  visibility: hidden;
+}
+
+.inline-block {
+  display: inline-box;
+  vertical-align: middle;
+  height: 60px;
+  width: 60px;
+}
+
+.box1 {
+  width: 300px;
+  height: 200px;
+  box-sizing: border-box;
+  background-color: aquamarine;
+  border: 4px red;
+  border-style: dotted;
+  font-size: 10rem;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+}
+
+.blackbox {
+  width: 100px;
+  height: 20px;
+  background-color: black;
+  position: absolute;
+  top: 770px;
+  right: 210px;
+}
+
+.energybomb {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(yellow, green);
+  position: absolute;
+  top: 400px;
+  left: 230px;
 }
