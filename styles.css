@@ -248,10 +248,10 @@ legend {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-50px);
+    transform: translateX(-30px);
   }
   100% {
-    transform: translateX(50px);
+    transform: translateX(80px);
   }
 }
 
@@ -323,6 +323,12 @@ legend {
   width: 8rem;
   height: auto;
   background-color: aqua;
+  animation: slide 2s linear infinite;
+}
+
+.logo1 {
+  width: 8rem;
+  height: auto;
   animation: slide 2s linear infinite;
 }
 
