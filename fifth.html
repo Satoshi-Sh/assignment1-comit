@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" type="image/png" href="/asset/cat.png" />
+    <title>General Page</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/" id="header-logo">Home</a>
+        <a href="second.html"><small>Table</small></a>
+        <a href="third.html"><small>Music</small></a>
+        <a href="fourth.html"><small>Play Ground</small></a>
+        <a href="fifth.html"><small>Experiment</small></a>
+      </div>
+    </header>
+    <main>
+      <h1>Experement</h1>
+      <div class="boxing-board">
+        <div class="boxing" id="1">
+          <img
+            class="logo animate2"
+            id="1-1"
+            src="asset/20210818_112743_fixed.png"
+          />
+        </div>
+        <div class="boxing" id="2">
+          <img
+            class="logo"
+            id="2-2"
+            src="asset/20210818_112743_grey_fixed.png"
+          />
+        </div>
+        <div class="boxing" id="3">
+          <img class="logo2" id="3-3" src="asset/20230215_123402_fixed.png" />
+        </div>
+        <div class="boxing" id="4">
+          <img class="logo2" id="4-4" src="asset/Akita_fixed.png" />
+        </div>
+      </div>
+    </main>
+    <script>
+      const element = document.getElementById("1");
+      const element1 = document.getElementById("1-1");
+
+      const element2 = document.getElementById("2");
+      const element2_2 = document.getElementById("2-2");
+
+      const element3 = document.getElementById("3");
+      const element3_3 = document.getElementById("3-3");
+
+      const element4 = document.getElementById("4");
+      const element4_4 = document.getElementById("4-4");
+
+      function changeBackgroundColor() {
+        const randomColor = getRandomColor();
+        const randomColor2 = getRandomColor();
+        const randomColor3 = getRandomColor();
+        const randomColor4 = getRandomColor();
+
+        element.style.backgroundColor = randomColor;
+        element1.style.backgroundColor = randomColor;
+
+        element2.style.backgroundColor = randomColor2;
+        element2_2.style.backgroundColor = randomColor2;
+
+        element3.style.backgroundColor = randomColor3;
+        element3_3.style.backgroundColor = randomColor3;
+
+        element4.style.backgroundColor = randomColor4;
+        element4_4.style.backgroundColor = randomColor4;
+      }
+
+      function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+      intervalId = setInterval(changeBackgroundColor, 1000);
+    </script>
+  </body>
+</html>
