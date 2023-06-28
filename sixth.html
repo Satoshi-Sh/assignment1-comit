@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
+    <link rel="icon" type="image/png" href="/asset/cat.png" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>General Page</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/" id="header-logo">Home</a>
+        <a href="second.html"><small>Table</small></a>
+        <a href="third.html"><small>Music</small></a>
+        <a href="fourth.html"><small>Play Ground</small></a>
+        <a href="fifth.html"><small>Experiment</small></a>
+        <a href="sixth.html"><small>Bootstrap</small></a>
+      </div>
+    </header>
+    <main>
+      <h1 class="underline">Bootstrap</h1>
+      <div class="text-center">
+        <button class="btn btn-primary center">Hello</button>
+      </div>
+      <div class="container">
+        <div class="row m-3">
+          <div class="col-6 border border-primary">Half-width Column</div>
+          <div class="col-3 border border-primary">One-fourth width Column</div>
+          <div class="col-3 border border-primary">One-fourth width Column</div>
+        </div>
+        <div class="row m-3">
+          <div class="col-6 border border-primary">Half-width Column</div>
+          <div class="col-3 border border-primary">One-fourth width Column</div>
+          <div class="col-3 border border-primary">One-fourth width Column</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">Column 1</div>
+          <div class="col">Column 2</div>
+          <div class="col">Column 3</div>
+        </div>
+        <div class="row">
+          <div class="col">Column 4</div>
+          <div class="col">Column 5</div>
+          <div class="col">Column 6</div>
+        </div>
+      </div>
+      <div id="draggable-container" draggable="true">
+        <img
+          id="draggable-image"
+          style="width: 100px; height: 100px"
+          src="asset/20210818_112743_fixed.png"
+        />
+      </div>
+    </main>
+    <script>
+      var draggableContainer = document.getElementById("draggable-container");
+
+      draggableContainer.addEventListener("dragstart", function (event) {
+        // Store the image ID in the drag data
+        event.dataTransfer.setData("text/plain", event.target.id);
+      });
+
+      draggableContainer.addEventListener("drag", function (event) {
+        // Update the image position based on the drag event
+        if (event.clientX == 0 && event.clientY == 0) return;
+        draggableContainer.style.left = event.clientX + "px";
+        draggableContainer.style.top = event.clientY + "px";
+      });
+      draggableContainer.addEventListener("drop", function (event) {
+        event.preventDefault();
+      });
+    </script>
+    <!-- make multiple object to draggable  by function-->
+
+    <script></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+  </body>
+</html>
